@@ -1,39 +1,4 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@chirag1254 
-chirag1254
-/
-basic-python-project
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-basic-python-project/stne paper scessors.py /
-@chirag1254
-chirag1254 Add files via upload
-…
-Latest commit c0cd73f on 27 Aug 2019
- History
- 1 contributor
-49 lines (41 sloc)  1.5 KB
- 
-Code navigation is available!
-Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
-
-import random
+mport random
 import time
 list = ["S","P","SC"]
 comppoint = 0
@@ -79,17 +44,3 @@ elif comppoint<yourpoint:
     print("\nYou won the game\n",yourpoint-comppoint,"\npoints")
 else:
     print("draw")
-
-
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
