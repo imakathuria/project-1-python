@@ -1,91 +1,95 @@
-# Print the Game Instruction to the User/Player 
-print("Winning Rules of the Rock Paper Scissor Game as follows: \n"
-                                +"\tRock  vs Paper   -> Paper wins \n"
-                                +"\tRock  vs Scissor -> Rock wins \n"
-                                +"\tPaper vs Scissor -> Scissor wins \n") 
-import random
+Skip to content
+Search or jump to…
 
-while True:
-
-    # Tell User to enter either Rock, Paper, Scissor    
-    print("Enter choice \n 1. rock \n 2. paper \n 3. scissor \n") 
-          
-    #CONVERTING TO LOWER CASE FOR COMPARISON
-    while True:
-        # Get the response from the User 
-        user_choice = input("User turn: > ") 
-        user_choice = user_choice.lower()
-        
-        if user_choice not in ['rock','paper','scissor']:
-            print ("Wrong input, please input again: ")
-        else:
-            break
-    
-    # Print the response from the User 
-    print("User has choosen : " + user_choice + "\n") 
-    
-    # Computer chooses randomly between Rock, Paper and Scissor
-    
-    comp_choice = random.choice(['rock','paper','scissor']) 
-
-    # Print computers choice
-    print("Computer choice is: " + comp_choice + "\n") 
-     
-    # Print User Choice and Computer Choice
-    print("\t" + user_choice + "\n V/s \n" + "\t"+ comp_choice) 
-
-    # Decide the condition of wining according to the Game Instructions
-    result = None
-    
-    if((user_choice == "rock" and comp_choice == "paper") or
-      (user_choice == "paper" and comp_choice == "rock" )): 
-        result = "paper"
-          
-    elif((user_choice == "rock" and comp_choice == "scissor") or
-        (user_choice == "scissor" and comp_choice == "rock")): 
-        result = "rock"
-    else: 
-        result = "scissor"
-    
-    # Compare the result with user and computer 
-    # Printing either user or computer wins
+Pull requests
+Issues
+Marketplace
+Explore
  
-    if (user_choice == comp_choice): 
-        print("<== Draw ==>") 
-    elif (result == user_choice): 
-        print("<== User wins ==>") 
-    else: 
-        print("<== Computer wins ==>") 
-        
+@chirag1254 
+chirag1254
+/
+basic-python-project
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+basic-python-project/stne paper scessors.py /
+@chirag1254
+chirag1254 Add files via upload
+…
+Latest commit c0cd73f on 27 Aug 2019
+ History
+ 1 contributor
+49 lines (41 sloc)  1.5 KB
+ 
+Code navigation is available!
+Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
 
-    # Get the response from User to Play Again    
-    ans = input("Do you want to play again ? (Y/N) > ") 
+import random
+import time
+list = ["S","P","SC"]
+comppoint = 0
+yourpoint = 0
+
+n=6
+for j in range(7):
+    print("enter your choice \n S-stone \n P-paper \n SC-secissor ")
+    choice = input().upper()
+    comp = random.choice(list)
+    print(comp)
+
+    if comp == choice:
+        comppoint=comppoint+0
+        yourpoint=yourpoint+0
+    elif comp == "S" and choice == "SC":
+        comppoint= comppoint+1
+        print(f"its computer point as \nStone breaked scessiors")
+    elif comp == "S" and choice == "P":
+        yourpoint= yourpoint+1
+        print(f"its your point as \nPaper rolled the stone in itself")
+    elif comp == "P" and choice == "S":
+        comppoint=comppoint+1
+        print(f"its computer point as \nPaper rolled the stone in itself")
+    elif comp == "P" and choice == "SC":
+        yourpoint=yourpoint+1
+        print(f"its your point as \nScessior cuted the paper")
+    elif comp == "SC" and choice == "S":
+        yourpoint=yourpoint+1
+        print(f"its your point as \nStone breaked scessiors")
+
+    elif comp == "SC" and choice == "P":
+        comppoint=comppoint+1
+        print(f"its computer point as \nScessior cuted the paper")
+
+    print("No. of chances left",n-j)
+
+    time.sleep(1)
+print(f"yourpoints = {yourpoint}\ncomppoints = {comppoint}")
+if comppoint>yourpoint:
+    print("\nYou loose the game\n",comppoint-yourpoint,"\npoints")
+elif comppoint<yourpoint:
+    print("\nYou won the game\n",yourpoint-comppoint,"\npoints")
+else:
+    print("draw")
 
 
-
-    # Check the response from User and continue the loop
-    # Otherwise break the loop to close the game
-    if (ans == 'n' or ans == 'N') : 
-        break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
